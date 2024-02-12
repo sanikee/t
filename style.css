@@ -1,0 +1,368 @@
+/* font-family: monospace, sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@600;900;1000&family=Pacifico&display=swap');
+
+
+
+body {
+  /* background-color: MistyRose; */
+   background-color: AntiqueWhite;
+  margin: 0;  
+}
+
+main {
+  padding: 25px 25px; 
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas: "aside main"; 
+}
+
+.aside {
+}
+
+.section__records {
+  grid-area: aside;
+  padding: 23px; 
+}
+
+.section__boxes {
+  grid-area: main;
+  padding: 15px;
+}
+
+/* ==================================== */
+/* меню где кнопки добавить, цвет и тп  */
+/* ==================================== */
+
+.topmenu {
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0px;
+  /* background: GreenYellow; */
+  background: #e1d2c4;
+  padding: 15px 10px;
+}
+
+.top__cat {
+  FLEX-GROW: 3;    
+}
+
+.top__input {
+  FLEX-GROW: 0;
+}
+
+.top__buttons {
+  FLEX-GROW: 2;
+}
+
+.top_colorpicker, .top__input {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rainbow_gradient {
+ background: rgb(206,255,0);
+background: linear-gradient(315deg, rgba(206,255,0,0.7315126734287465) 0%, rgba(246,213,134,0.42619054457720584) 25%, rgba(255,222,0,0.8575630935968137) 48%, rgba(0,212,255,0.6810925053615196) 100%);  
+}
+
+/* лого-котик  */
+
+.top__cat {
+  font-style: normal;
+}
+
+.top__cat:hover {
+  cursor: help;
+  
+}
+
+
+/* ==================================== */
+/* инпуты добавления  */
+/* ==================================== */
+
+.top__input input[type="color"] {
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0px;
+  margin: 0;
+  margin-top: 0px;
+  margin-left: 5px;
+  border: 0px solid grey; 
+  background-color: greenyellow;
+}
+
+.top__input input[type="text"] {
+  margin: 0 15px 0 15px;
+}
+
+/* кнопки добавления  */
+
+.top__buttons {
+  margin-top: 0px;
+  margin-left: 15px;
+}
+
+.top__buttons button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 1000;
+}
+
+/* ==================================== */
+/* меню внешнего вида */
+/* ==================================== */
+
+.top_colorpicker button {
+  background: transparent;
+  border: 0;
+  opacity: 75%;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  margin-left: 3px;
+}
+
+
+.top_colorpicker input[type=color] {
+  width: 1.5em;
+  height: 1.5em;
+  background: greenyellow;
+  border: 0px solid red;
+  padding: 0px;
+  margin-left: 5px;
+}
+
+
+.btn__headertoggle {  
+}
+
+/* ==================================== */
+/* заголовок */
+/* ==================================== */
+
+.header {
+  padding: 15px 0;
+  background: beige;
+  font-family: Arial Black, sans-serif; 
+  font-weight: 700;
+  /* color: BurlyWood;*/
+  color: Tan;
+  font-size: 5em;
+  text-align: center;
+  margin: 0;
+}
+
+.header p {
+  margin: 50px;
+}
+
+/* ==================================== */
+/* стикеры  */
+/* ==================================== */
+
+.line {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: #adff2f;
+  width: 225px;
+  margin: 3px;
+  line-height: 25px;
+  padding: 5px 15px;
+  
+   /* font-family: monospace, sans-serif; */
+  font-family: 'Caveat', cursive; 
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.just_record {
+  text-align: center;
+}
+
+.check_record input {
+  margin-right: 10px;
+}
+
+/* ==================================== */
+/* коробки */
+/* ==================================== */
+
+.box {
+  display: block;
+  float: left;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  background-size: cover;
+  border: 5px solid Tan;
+  border-radius: 50px 0 50px 0; 
+  font-family: monospace, sans-serif;
+  font-size: 11px;
+  position: relative;
+}
+ 
+.box:not(:hover) {
+  border-color: Tan;
+  transition: 0.75s;
+}
+
+.box:hover {
+  border-color: Bisque;
+  transition: 0.75s;
+}
+
+/* ==================================== */
+/* подпись к картинке  */
+/* ==================================== */
+
+.box p {
+  margin: 1px;
+  margin-left: -1px;
+  padding-left: 5px; 
+  line-height: 24px;
+  background: Bisque;
+  opacity: 75%;
+  text-align: left;
+  vertical-align: bottom;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box p input {
+  text-align: left;
+  line-height: 20px;
+  vertical-align: top;
+  margin-left: 0;
+}
+
+/* ==================================== */
+/* рука */
+/* ==================================== */
+
+.pictogram {
+  font-family: Courier, serif;
+  font-weight: 100;
+  color: Beige;
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;   
+  font-weight: 700;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.box:hover .pictogram.small-rotate {
+   animation: animate_hand 1.5s ease;  
+}
+
+@keyframes animate_hand {
+  25% {
+    color: tan;
+  }
+  50% {
+    transform: rotate(-35deg);
+    /*color: #785549;
+    color: #aa7a46;
+    color: #a37d53;*/
+    color: #b88d5f;
+  }
+  75% {
+    transform: rotate(5deg);
+    color: tan;
+  }  
+  100% {
+    color: beige;
+  }
+}
+
+/* ==================================== */
+/* кнопочки удалить изменить */
+/* ==================================== */
+
+.box span {
+  color: #333;
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.box__edit {
+  top: 15%;
+  left: 85%;
+}
+
+.box__remove {
+  top: 3%;
+  left: 85%;
+}
+
+.box:hover .box__edit, .box:hover .box__remove {
+  display: block; 
+  animation: ani 0.5s;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.box span:hover {
+  color: GreenYellow;
+}
+
+span.small-rotate {
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+font-weight: 700px;
+}
+
+span.box__edit:hover {
+  -webkit-transform: rotate(90deg); 
+  transform: rotate(90deg);  
+}
+
+span.box__remove:hover {
+  -webkit-transform: rotate(180deg); 
+  transform: rotate(180deg);  
+}
+
+/* ==================================== */
+/* misc */
+/* ==================================== */
+
+.hide {
+  display: none;
+}
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* ==================================== */
+/* deleted */
+/* ==================================== */
+
+.sortable-chosen {
+   /* opacity: 0.5; */
+  
+}
+
