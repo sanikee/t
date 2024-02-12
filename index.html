@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="main.js" type="module" defer></script>
+    <!--  <script src="https:/cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.1/Sortable.min.js/" defer></script> -->
+</head>
+<body>
+
+
+<!-- верхнее меню -->
+<nav class="topmenu rainbow-gradient">   
+  
+  <!-- логокот, навести на него - поднимет лапку -->
+    <span class="top__cat" id="cat-1">&nbspᨐ&nbsp</span>
+    <span class="top__cat hide" id="cat-2">&nbspᨐฅ&nbsp</span>
+  
+  <!-- меню создания новой записи -->
+
+  <!-- инпут -->
+  <div class="top__input">
+   <label for="usecolor"><input type="checkbox" id="usecolor" name="usecolor" checked />цвет:</label>
+    <input type="color" id="color3" name="color3" value="#adff2f" />
+    <input type="text" id="text" placeholder=""> 
+    <label><input type="checkbox" id="check">это список</label>
+  </div>
+  
+  <!-- кнопки добавления -->
+  <div class="top__buttons">
+    <button onClick="addBox()"  class="btn__addbox">+ короб</button>
+    <button onClick="addCol()" class="btn__addcol">+ заметка</button>
+    <button onClick="addLine()" class="btn__addstring">+ стикер</button>
+    <button onClick="addSmth()" class="btn__add"> + </button>
+  </div>
+  
+  <!-- меню внешнего вида -->
+  <div class="top_colorpicker">
+    <label for="color">цвет фона и меню:</label>
+    <input type="color"  id="color" name="color" value="#faebd7" />
+    <input type="color" onChange="toChangeMenuColor()" id="color2" name="color2" value="#adff2f" />
+    <button onClick="toToggleMenuColor()" class="btn__gradient_menu_toggle">🌈</button>
+    <button onClick="toToggleHeader()" class="btn__headertoggle">🍵</button>
+  </div>  
+  
+</nav>
+
+<!-- шапка -->
+<div class="header">
+  <p>ᨐฅ ‧˚♡𓂃 ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა🍵</p>
+  <p class="head__slogan"></p>
+</div>
+
+<!-- когда-нибудь может быть
+<figure>
+  <figcaption>Привет, я Алиса</figcaption>
+  <audio controls src="hi-alice.mp3">
+    Ваш браузер не поддерживает встроенное аудио. Попробуйте скачать его
+    <a href="hi-alice.mp3" download>по ссылке</a>.
+  </audio>
+</figure>
+-->
+
+<!-- основная часть -->
+<main>
+  <aside id="section__records" class="section__records"></aside>
+  <section id="section__boxes" class="section__boxes"></section>
+</main>
+
+  
+</body>
+</html>
